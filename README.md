@@ -1,113 +1,71 @@
-# 🧠 Mindathon Academy Website
+# Mindathon Academy — Website
 
-A stunning, modern website for Mindathon Academy - featuring 3D effects, particle animations, and a beautiful blue game theme.
+The official website for **Mindathon Academy** and the **Mindathon** cognitive training game.
 
-![Mindathon Academy](https://img.shields.io/badge/Mindathon-Academy-00d4ff?style=for-the-badge&logo=brain&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+A premium, multi-page, static website built with clean HTML, CSS and vanilla JavaScript — no frameworks, no build-time dependencies.
 
-## ✨ Features
+## Pages
 
-- **3D Animated Hero Section** - Floating brain visualization with neural nodes
-- **Particle System** - Interactive canvas-based particle background
-- **Glassmorphism Design** - Modern frosted glass UI elements
-- **Smooth Scroll Animations** - Reveal elements as you scroll
-- **Countdown Timer** - Live countdown to the event
-- **Tilt Effects** - 3D perspective tilt on hover
-- **Custom Cursor** - Glowing cursor effect
-- **Fully Responsive** - Works on all devices
-- **Preloader** - Smooth loading animation
+| Page | File |
+| --- | --- |
+| Home | `index.html` |
+| About | `about.html` |
+| The Game | `game.html` |
+| Cognitive Skills | `skills.html` |
+| How It Works | `how-it-works.html` |
+| For Parents | `parents.html` |
+| For Schools | `schools.html` |
+| Programmes | `programmes.html` |
+| Gallery | `gallery.html` |
+| FAQ | `faq.html` |
+| Contact | `contact.html` |
+| Get Mindathon | `get-mindathon.html` |
 
-## 🚀 Deployment to GitHub Pages
+## Project structure
 
-### Option 1: Quick Deploy
+```
+├── build.js                 # assembles pages from src/ into dist/
+├── src/
+│   ├── partials/            # head, navbar, footer, scripts
+│   └── pages/               # one file per page (uses {{TOKEN}} slots)
+├── assets/
+│   ├── css/main.css         # design system
+│   └── js/main.js           # interactions (vanilla)
+├── images/                  # source images (logo, product angles)
+└── dist/                    # built site (deploy this folder)
+```
 
-1. Push your code to GitHub:
-   ```bash
-   git add .
-   git commit -m "Initial commit: Mindathon Academy website"
-   git push origin main
-   ```
-
-2. Go to your repository on GitHub
-
-3. Navigate to **Settings** → **Pages**
-
-4. Under "Source", select:
-   - **Branch**: `main`
-   - **Folder**: `/ (root)`
-
-5. Click **Save**
-
-6. Your site will be live at: `https://yourusername.github.io/mindathon_website/`
-
-### Option 2: Using GitHub CLI
+## Build
 
 ```bash
-# If you have GitHub CLI installed
-gh repo create mindathon-academy --public --source=. --remote=origin --push
-gh repo view --web
-# Then enable GitHub Pages from the Settings
+node build.js        # outputs the full site to dist/
 ```
 
-## 📁 Project Structure
+Then serve `dist/` (e.g. `python3 -m http.server 8080 --directory dist`) or deploy it to GitHub Pages.
 
-```
-mindathon_website/
-├── index.html          # Main HTML file
-├── styles.css          # All styling & animations
-├── script.js           # JavaScript interactions
-└── README.md           # This file
-```
+## Editing content
 
-## 🎨 Color Palette
+- **Copy** — edit the files in `src/pages/` and rebuild.
+- **Shared chrome** — navbar, footer, head meta live in `src/partials/`.
+- **Brand colours / fonts / spacing** — all design tokens are in `assets/css/main.css` under `:root`.
+- **SEO / social share** — per-page titles, descriptions and Open Graph tags are set in `build.js` (`PAGES_CONF`).
+- **Site URL** — update `SITE_URL` in `build.js` before going live (used for canonical/OG URLs).
 
-| Color | Hex | Usage |
-|-------|-----|-------|
-| Primary Dark | `#0a0e27` | Background |
-| Primary | `#0f1642` | Sections |
-| Accent Cyan | `#00d4ff` | Highlights |
-| Accent Teal | `#00f5d4` | Gradients |
-| Accent Purple | `#7b68ee` | Accents |
+## Images
 
-## 📞 Event Details
+Real product images live in `images/`:
 
-- **Date**: March 15, 2026
-- **Time**: 4:00 PM - 6:30 PM
-- **Venue**: YMCA Seminar Hall (Hibiscus Room)
-- **Address**: 95, Jalan Padang Belia, Brickfields, Kuala Lumpur
-- **Contact**: 012-469 1671 / 017-766 4345
+- `logo.png` — Mindathon logo (used in navbar, footer, favicon)
+- `mindathon-product.jpg` — the product shot (used across every page)
 
-## 🛠️ Customization
+Replace these files with the same names to swap images site-wide. Placeholder tiles marked
+**"Photo coming soon"** (founder photos, "What's Inside", students/programmes/community
+gallery slots) are intended to be replaced with real photography later.
 
-### Change Event Date
-Edit `script.js` line ~360:
-```javascript
-new CountdownTimer('March 15, 2026 16:00:00');
-```
+## Notes
 
-### Change Colors
-Edit `styles.css` root variables:
-```css
-:root {
-    --accent-blue: #00d4ff;
-    --accent-cyan: #00f5d4;
-    --accent-purple: #7b68ee;
-}
-```
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## 📄 License
+- The contact form opens WhatsApp with the message pre-filled — no data is stored or sent to a server.
+- No payments are processed on this site; the Get Mindathon page is a conversion/enquiry page by design.
+- All content is factual and intentionally avoids claims that have not been verified.
 
 © 2026 Mindathon Academy. All Rights Reserved.
-
----
-
-Made with 💙 for Mindathon Academy
