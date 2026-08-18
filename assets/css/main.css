@@ -892,6 +892,8 @@ section { padding-block: clamp(3.5rem, 7vw, 6rem); }
 
 .gallery-item:hover img { transform: scale(1.05); }
 
+.gallery-item--portrait img { aspect-ratio: 3 / 4; }
+
 .gallery-item figcaption {
   position: absolute;
   inset: auto 0 0 0;
