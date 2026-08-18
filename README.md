@@ -56,11 +56,14 @@ Then serve `dist/` (e.g. `python3 -m http.server 8080 --directory dist`) or depl
 Real product images live in `images/`:
 
 - `logo.png` — Mindathon logo (used in navbar, footer, favicon)
-- `mindathon-product.jpg` — the product shot (used across every page)
+- `mindathon-box-1.jpg` — the Mindathon box photo (used across every page)
+- `founder-alagan.jpg` — Master Alagan Govindan (founder cards)
 
-Replace these files with the same names to swap images site-wide. Placeholder tiles marked
-**"Photo coming soon"** (founder photos, "What's Inside", students/programmes/community
-gallery slots) are intended to be replaced with real photography later.
+Add `mindathon-box-2.jpg` … `mindathon-box-5.jpg` later and swap them into the
+gallery tiles. Replace files with the same names to swap images site-wide.
+Placeholder tiles marked **"Photo coming soon"** (K. Kumaran's photo,
+"What's Inside", students/programmes/community gallery slots) are intended to be
+replaced with real photography later.
 
 ## Notes
 

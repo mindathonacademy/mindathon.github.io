@@ -104,7 +104,7 @@ function partial(name) {
 function buildHead(page) {
   const head = partial('head');
   const url = SITE_URL + page.file;
-  const ogImage = SITE_URL + 'assets/images/mindathon-product.jpg';
+  const ogImage = SITE_URL + 'assets/images/mindathon-box-1.jpg';
   return head
     .replaceAll('{{TITLE}}', page.title)
     .replaceAll('{{DESCRIPTION}}', page.desc)
