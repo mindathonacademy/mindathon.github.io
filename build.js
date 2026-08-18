@@ -16,25 +16,25 @@ const DIST = path.join(__dirname, 'dist');
 const SITE_URL = 'https://mindathonacademy.github.io/';
 
 const DEFAULT_DESC =
-  'Discover Mindathon, a hands-on cognitive training game designed to make brain training engaging through memory, focus, problem-solving and other cognitive challenges.';
+  'Mindathon Academy makes cognitive skills training engaging with Mindathon, a hands-on cognitive skills enhancement training game for families, students and schools.';
 
 const PAGES_CONF = [
   {
     file: 'index.html',
-    title: 'Mindathon Academy | Cognitive Training Game',
+    title: 'Mindathon Academy | Cognitive Skills Enhancement Training',
     desc: DEFAULT_DESC,
     active: 'home',
   },
   {
     file: 'about.html',
     title: 'About Us | Mindathon Academy',
-    desc: 'Learn about Mindathon — a hands-on cognitive training game — and the people behind it.',
+    desc: 'Learn about Mindathon — a hands-on cognitive skills training game — and the people behind it.',
     active: 'about',
   },
   {
     file: 'game.html',
-    title: 'The Game | Meet Mindathon',
-    desc: 'Meet Mindathon, a physical cognitive training game designed to practise memory, focus, speed and problem-solving through active, hands-on play.',
+    title: 'The Game | Mindathon Academy',
+    desc: 'Meet Mindathon, a physical cognitive skills training game designed to practise memory, focus, speed and problem-solving through active, hands-on play.',
     active: 'game',
   },
   {
@@ -52,7 +52,7 @@ const PAGES_CONF = [
   {
     file: 'parents.html',
     title: 'For Parents | Mindathon Academy',
-    desc: 'Looking for a meaningful screen-free activity? Mindathon is a hands-on cognitive training game families can play together.',
+    desc: 'Looking for a meaningful screen-free activity? Mindathon is a hands-on cognitive skills training game families can play together.',
     active: 'parents',
   },
   {
@@ -76,7 +76,7 @@ const PAGES_CONF = [
   {
     file: 'faq.html',
     title: 'FAQ | Mindathon Academy',
-    desc: 'Frequently asked questions about Mindathon — what it is, who it is for and how to get started.',
+    desc: 'Frequently asked questions about Mindathon — a cognitive skills training game — what it is, who it is for and how to get started.',
     active: 'faq',
   },
   {
